@@ -10,9 +10,9 @@ const questions = [
     question: 'What sweet food made by bees using nectar from flowers?',
     options: {
       rightAnswer: 'Honey',
-      optionA: 'biscuit',
-      optionB: 'indomie',
-      optionC: 'chin chin',
+      optionA: 'Biscuit',
+      optionB: 'Indomie',
+      optionC: 'Chin chin',
     }
   },
   {

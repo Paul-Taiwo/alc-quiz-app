@@ -36,7 +36,7 @@ body,
 }
 
 .align-content {
-  margin: 20% 20% 0 10%;
+  margin: 3% 20% 0 10%;
 }
 
 .options {
@@ -60,11 +60,11 @@ body,
 }
 
 .question {
-  font-size: 2.4em;
+  font-size: 1.6em;
 }
 
 .question-no {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 100;
   margin-bottom: 15px;
 }
@@ -75,7 +75,7 @@ body,
 }
 
 .notify p {
-  font-size: 2.2em;
+  font-size: 1.3em;
   color: #fff;
 }
 
@@ -86,7 +86,7 @@ body,
 
 .option-btn {
   width: 100%;
-  font-size: 2.5em;
+  font-size: 1.5em;
   padding: 10px;
   margin-bottom: 6%;
 }
@@ -99,10 +99,23 @@ body,
 }
 
 .btn-next {
-  padding: 10px;
-  font-size: 1.8em;
+  padding: 6px 0;
+  font-size: 1.2em;
   margin-bottom: 5%;
+  width: 50%;
   font-style: italic;
+}
+
+.correct,
+.correct:hover {
+  background-color: #006060 !important;
+  color: #fff;
+}
+
+.wrong,
+.wrong:hover {
+  background-color: #aa0000 !important;
+  color: #fff;
 }
 
 #final-score {
@@ -116,7 +129,6 @@ footer.foot {
   justify-content: space-between;
   width: 100%;
   bottom: 0;
-  height: 65px;
   padding: 5.2% 5%;
   vertical-align: middle;
   background: linear-gradient(to right, #544e96, #6d3c95)
@@ -126,10 +138,6 @@ footer.foot h2,
 footer.foot p {
   color: #fff;
   font-size: 1em;
-}
-
-footer.foot p {
-  padding-top: 0.4%
 }
 
 @media only screen and (min-width: 500px) {
@@ -142,10 +150,22 @@ footer.foot p {
     font-size: 3.4em;
   }
 
+  .question-no {
+    font-size: 2em;
+  }
+
   .question-container {
     margin-bottom: 0%;
   }
 
+  .notify p {
+    font-size: 2.2em;
+  }
+
+  .btn-next {
+    padding: 10px 0;
+    font-size: 1.8em;
+  }
 
   .option-btn,
   .btn-next {
@@ -158,6 +178,10 @@ footer.foot p {
     margin-bottom: 4%;
   }
 
+  .option-btn {
+    font-size: 2.5em;
+  }
+
   .option-btn-hover:focus,
   .option-btn-hover:hover,
   .btn-next-hover:hover,
@@ -168,21 +192,6 @@ footer.foot p {
 
   .btn-disabled {
     cursor: not-allowed;
-  }
-
-  .correct {
-    background-color: #006060;
-    color: #fff;
-  }
-
-  .wrong {
-    background-color: #aa0000;
-    color: #fff;
-  }
-
-  .wrong:hover {
-    background-color: #aa0000 !important;
-    color: #fff;
   }
 
   #final-score {
