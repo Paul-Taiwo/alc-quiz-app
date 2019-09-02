@@ -2,14 +2,21 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   font-family: 'Montserrat', sans-serif;
 }
 
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+html,
+body,
 .background {
   background: linear-gradient(to bottom right, rgba(30, 203, 255, 1), rgba(172, 115, 255, 1));
-  height: 100vh;
 }
 
 .p-5 {
@@ -21,38 +28,86 @@
 }
 
 .container {
-  margin: 0 10%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding-bottom: 65px;
+}
+
+.align-content {
+  margin: 20% 20% 0 10%;
+}
+
+.options {
+  margin: 2% 0 5%;
+}
+
+.question-container {
+  padding: 5% 0 2%;
+  margin-bottom: 4%;
 }
 
 .question-container::after {
   content: '';
-  height: 1px;
+  height: 30px;
   background-color: #fff;
 }
 
-.question, .question-no {
+.question,
+.question-no {
   color: #fff;
 }
 
 .question {
-  font-size: 3.4em;
+  font-size: 2.4em;
 }
 
 .question-no {
   font-size: 2em;
   font-weight: 100;
+  margin-bottom: 15px;
+}
+
+.notify {
+  padding: 12px 0;
+  visibility: hidden;
+}
+
+.notify p {
+  font-size: 2.2em;
+  color: #fff;
 }
 
 .btn {
   border: none;
-  background-color: #fff;
   border-radius: 18px;
-  width: 38%;
+}
+
+.option-btn {
+  width: 100%;
   font-size: 2.5em;
-  padding: 2%;
-  margin-bottom: 4%;
+  padding: 10px;
+  margin-bottom: 6%;
+}
+
+.option-btn,
+.btn-next {
   color: #5398de;
+  background-color: #fff;
   box-shadow: 2px 8px 22px #555;
+}
+
+.btn-next {
+  padding: 10px;
+  font-size: 1.8em;
+  margin-bottom: 5%;
+  font-style: italic;
+}
+
+#final-score {
+  display: none;
+  margin-top: 54%;
 }
 
 footer.foot {
@@ -62,7 +117,7 @@ footer.foot {
   width: 100%;
   bottom: 0;
   height: 65px;
-  padding: 1.2% 5%;
+  padding: 5.2% 5%;
   vertical-align: middle;
   background: linear-gradient(to right, #544e96, #6d3c95)
 }
@@ -70,23 +125,77 @@ footer.foot {
 footer.foot h2,
 footer.foot p {
   color: #fff;
+  font-size: 1em;
 }
 
 footer.foot p {
   padding-top: 0.4%
 }
 
-@media only screen and (min-width: 900px) {
-  .btn {
-    border: none;
-    background-color: #fff;
-    border-radius: 18px;
-    width: 38%;
-    font-size: 2.5em;
-    padding: 2%;
-    margin-bottom: 4%;
-    color: #5398de;
-    box-shadow: 2px 8px 22px #555;
+@media only screen and (min-width: 500px) {
+
+  .align-content {
+    margin: 0 20% 0 10%;
   }
 
+  .question {
+    font-size: 3.4em;
+  }
+
+  .question-container {
+    margin-bottom: 0%;
+  }
+
+
+  .option-btn,
+  .btn-next {
+    width: 38%;
+    cursor: pointer;
+  }
+
+  .option-btn {
+    padding: 2%;
+    margin-bottom: 4%;
+  }
+
+  .option-btn-hover:focus,
+  .option-btn-hover:hover,
+  .btn-next-hover:hover,
+  .option-btn-hover:active {
+    background: linear-gradient(to bottom left, rgba(30, 203, 255, 1), rgba(172, 115, 255, 1));
+    color: #fff;
+  }
+
+  .btn-disabled {
+    cursor: not-allowed;
+  }
+
+  .correct {
+    background-color: #006060;
+    color: #fff;
+  }
+
+  .wrong {
+    background-color: #aa0000;
+    color: #fff;
+  }
+
+  .wrong:hover {
+    background-color: #aa0000 !important;
+    color: #fff;
+  }
+
+  #final-score {
+    margin-top: 28%;
+  }
+
+  footer.foot h2,
+  footer.foot p {
+    font-size: 1.5em;
+  }
+
+  footer.foot {
+    padding: 1.2% 5%;
+  }
 }
+

@@ -13,24 +13,35 @@
 <body>
   <div class="background">
     <div class="container">
-      <div class="question-container p-5">
-        <p class="question-no">Question 1</p>
-        <h1 class="question">What is bla bla?</h1>
-      </div>
-      <div class="options">
-        <button class="btn mr-40">A</button>
-        <button class="btn">A</button>
-        <button class="btn mr-40">A</button>
-        <button class="btn">A</button>
-        <button class="btn">A</button>
-      </div>
+      <section id="quiz-content" class="align-content">
+        <div class="question-container p-5">
+          <p class="question-no">Question 1</p>
+          <h1 class="question">What is the name of the qovernor of Lagos state?</h1>
+        </div>
+        <hr />
+        <div class="notify">
+          <p>Correct! The answer is 8 </p>
+        </div>
+
+        <div class="options">
+        </div>
+
+        <button id='next' class="btn btn-next">next</button>
+      </section>
+
+      <section id="final-score" class="align-content">
+        <h1 class="question">You scored 2 out of 10</h1>
+      </section>
+
+      <footer class="foot">
+        <h2>THE AVERAGE GAME</h2>
+        <p>current score: <span id="score">0</span></p>
+      </footer>
     </div>
   </div>
 
-  <footer class="foot">
-    <h2>THE AVERAGE GAME</h2>
-    <p>current score: 0</p>
-  </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
