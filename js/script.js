@@ -5,6 +5,7 @@ const questionText = document.querySelector('h1.question');
 const questionNo = document.querySelector('p.question-no');
 const scoreElement = document.querySelector('#score');
 
+// Question bank
 const questions = [
   {
     question: 'What sweet food made by bees using nectar from flowers?',
@@ -97,6 +98,8 @@ const questions = [
     }
   },
 ];
+
+// const copiedQuestions = [...questions];
 
 // Shuffle array function
 const shuffleArray = (array) => {
@@ -197,6 +200,10 @@ document.querySelector('#next').addEventListener('click', (evt) => {
   }
 
   render();
+});
+
+document.querySelector('#reset-btn').addEventListener('click', () => {
+  window.location.href = '/';
 });
 
 // Render Questions and option after page has loaded
